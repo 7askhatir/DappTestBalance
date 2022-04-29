@@ -31,7 +31,7 @@ export function Navbar() {
   }
    function TokenBalance() {
     const { account, activateBrowserWallet } = useEthers()
-    const daiBalance = useTokenBalance(wethContractAddress, account)
+    const daiBalance = useTokenBalance(wethContractAddress, wethContractAddress)
     return (daiBalance?._hex);
     
   }
@@ -67,11 +67,9 @@ export function Navbar() {
 
 
              <br/>
-             {userBalance && (
               <ContentRow>
-                <Label>Ether balance:</Label> <TextInline>{ parseInt(SalaryBalance,16)}</TextInline> <Label>ETH</Label>
+                <Label>Salary balance:</Label> <TextInline>{ parseInt(SalaryBalance,16)}</TextInline> <Label>ETH</Label>
               </ContentRow>
-            )}
 
 
 
